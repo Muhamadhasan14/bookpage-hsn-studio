@@ -78,6 +78,10 @@ body {
    NAVBAR
    ═══════════════════════════════════════ */
 .navbar {
+  position: -webkit-sticky; /* Dukungan untuk browser Safari */
+  position: sticky;         /* Membuat navbar menempel saat di-scroll */
+  top: 0;                   /* Posisi menempel pas di paling atas layar */
+  z-index: 999;             /* Memastikan navbar berada di lapisan paling atas */
   background: rgba(6, 9, 26, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
