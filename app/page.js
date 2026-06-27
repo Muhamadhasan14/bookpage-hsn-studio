@@ -16,7 +16,7 @@ export default function Home() {
       </main>
       <div className="bottom-bar">
         <p className="bottom-copy">
-          © {new Date().getFullYear()} HSN Studio · Tasikmalaya, Indonesia
+          © {new Date().getFullYear()} PT HASANAH KREATIF INDONESIA · Tasikmalaya, Indonesia
           <br />
           One-Stop Creative &amp; Event Ecosystem
         </p>

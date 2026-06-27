@@ -5,10 +5,10 @@
 
 export const SITE_NAME = 'hsn.studio';
 export const SITE_TAGLINE = 'Feel the Frame';
-export const SITE_URL = 'https://hsn.studio';
+export const SITE_URL = 'https://link.hsnstudio.id';
 
-export const HOURS = '09.00 – 21.00 WIB';
-export const LOCATION_LABEL = 'Jl. Peta No.21, Kahuripan, Kec. Tawang, Kab. Tasikmalaya, Jawa Barat 46115';
+export const HOURS = '10.00 – 21.00 WIB';
+export const LOCATION_LABEL = 'Jl. Peta No.21, Kahuripan, Kec. Tawang, Kota Tasikmalaya, Jawa Barat 46115';
 
 // WhatsApp
 export const WHATSAPP_NUMBER = '628132260390';
@@ -35,5 +35,5 @@ export const MAPS_EMBED =
 
 // CTA
 export const CTA_QUOTE =
-  'Kreatif itu bukan kemewahan — itu kebutuhan. Dan kami di sini untuk memenuhinya';
+  'Kreatif itu bukan kemewahan - itu kebutuhan. Dan kami di sini untuk memenuhinya';
 export const CTA_BUTTON_LABEL = 'Konsultasi Gratis Sekarang';
