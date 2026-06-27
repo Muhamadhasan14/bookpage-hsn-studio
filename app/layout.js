@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'hsn.studio — Feel the Frame',
     description: 'Kreatif itu bukan kemewahan — itu kebutuhan. Dan kami di sini untuk memenuhinya.',
-    url: 'https://info.hsnstudio.id/',
+    url: 'https://link.hsnstudio.id',
     siteName: 'hsn.studio',
   },
 };
