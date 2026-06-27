@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script'; // Import Script bawaan Next.js untuk Pixel
 
 export const metadata = {
   title: 'hsn.studio — Feel the Frame',
@@ -6,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'hsn.studio — Feel the Frame',
     description: 'Kreatif itu bukan kemewahan — itu kebutuhan. Dan kami di sini untuk memenuhinya.',
-    url: 'https://hsn.studio',
+    url: 'https://info.hsnstudio.id/',
     siteName: 'hsn.studio',
   },
 };
@@ -14,7 +15,36 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <head>
+        {/* KODE META PIXEL (FACEBOOK PIXEL) */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1326837342903336');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+      </head>
+      <body>
+        {children}
+        
+        {/* Backup pelacakan jika browser mematikan JavaScript */}
+        <noscript>
+          <img 
+            height="1" 
+            width="1" 
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1326837342903336&ev=PageView&noscript=1"
+          />
+        </noscript>
+      </body>
     </html>
   );
 }
