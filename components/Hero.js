@@ -7,13 +7,22 @@ import { WhatsAppIcon, InstagramIcon, TikTokIcon, ShareIcon } from './Icons';
 export default function Hero() {
   const [copied, setCopied] = useState(false);
 
-  function handleShare() {
+  async function handleShare() {
     if (navigator.share) {
-      navigator.share({ title: 'hsn.studio — Feel the Frame', url: SITE_URL });
+      try {
+        await navigator.share({ title: 'hsn.studio — Feel the Frame', url: SITE_URL });
+      } catch (error) {
+        // Mengabaikan pesan error saat pengunjung menekan tombol Cancel
+        console.log('Share dibatalkan oleh pengguna.');
+      }
     } else {
-      navigator.clipboard?.writeText(SITE_URL);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
+      try {
+        await navigator.clipboard?.writeText(SITE_URL);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2200);
+      } catch (error) {
+        console.error('Gagal menyalin tautan:', error);
+      }
     }
   }
 
